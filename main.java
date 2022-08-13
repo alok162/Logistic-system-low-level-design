@@ -5,6 +5,20 @@ public enum class AccountStatus {
     DELETED
 }
 
+public enum class PaymentStatus {
+    PENDING,
+    PAID
+}
+
+public enum class OrderStatus {
+    RECIEVED,
+    ARRIVED_AT_HUB,
+    SHIPPED,
+    IN_TRANSIT,
+    DELIVERED,
+    DISPATCH
+}
+
 public class Address {
     private String streetAddress;
     private String city;
@@ -32,13 +46,17 @@ public abstract class Account {
 
 public class Sender extends Account {
     private List<Order> orders;
-    
+
     public void Sender() {
         super();
     }
 
     public void resetPassword() {
         // implementation
+    }
+
+    public getAllOrder() {
+        
     }
 }
 
@@ -48,8 +66,13 @@ public class Recipient extends Account {
     public void Recipient() {
         super();
     }
+
     public void resetPassword() {
         // implementation
+    }
+
+    public getAllOrder() {
+
     }
 }
 
@@ -58,8 +81,13 @@ public class Admin extends Account {
     public void Admin() {
         super();
     }
+
     public void resetPassword() {
         // implementation
+    }
+
+    public assignOrder() {
+
     }
 }
 
@@ -101,20 +129,3 @@ public class Payment {
     private Currency currency;
     private PaymentStatus status;
 }
-
-public enum class PaymentStatus {
-    PENDING,
-    PAID
-}
-
-public enum class OrderStatus {
-    RECIEVED,
-    ARRIVED_AT_HUB,
-    SHIPPED,
-    IN_TRANSIT,
-    DELIVERED,
-    DISPATCH
-}
-
-
-
