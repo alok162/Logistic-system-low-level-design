@@ -111,7 +111,10 @@ public class DeliveryExecutive extends Account {
 }
 
 public class Package {
-
+    private Decimal weight;
+    private Decimal volume;
+    private Decimal price;
+    private String name;
 }
 
 public class Order {
